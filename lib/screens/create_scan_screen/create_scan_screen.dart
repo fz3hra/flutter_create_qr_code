@@ -1,0 +1,65 @@
+import 'package:eva_icons_flutter/eva_icons_flutter.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_create_qrcode/config/Routes.dart';
+import 'package:flutter_create_qrcode/widgets/widget_exports.dart';
+import 'package:gap/gap.dart';
+
+class CreateScanScreen extends StatelessWidget {
+  const CreateScanScreen({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        const Text(
+          "Choose ",
+          style: TextStyle(
+            fontFamily: 'poppins_bold',
+            fontSize: 24,
+            color: Color(0xFF6565FF),
+          ),
+        ),
+        const Text(
+          "your destination!",
+          style: TextStyle(
+            fontFamily: 'poppins_bold',
+            fontSize: 24,
+          ),
+        ),
+        const Gap(8),
+        const Text(
+          "Scan QR Code",
+          style: TextStyle(
+            fontFamily: 'poppins_regular',
+            fontSize: 16,
+          ),
+        ),
+        const Gap(32),
+        DestinationWidget(
+          title: 'Website',
+          icon: EvaIcons.browserOutline,
+          color: Color(0xFF68A2F4),
+          onTap: () => Navigator.pushNamed(
+            context,
+            Routes.createQrWebsite,
+          ),
+        ),
+        const Gap(16),
+        DestinationWidget(
+          title: 'Email',
+          icon: EvaIcons.emailOutline,
+          color: Color(0xFF2A9FEE),
+          onTap: () {},
+        ),
+        const Gap(16),
+        DestinationWidget(
+          title: 'Wifi',
+          icon: EvaIcons.wifi,
+          color: Color(0xFF9E72E4),
+          onTap: () {},
+        ),
+      ],
+    );
+  }
+}
