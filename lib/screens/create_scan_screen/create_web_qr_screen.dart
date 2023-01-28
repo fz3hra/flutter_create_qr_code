@@ -11,7 +11,7 @@ class CreateWebQrScreen extends StatelessWidget {
       body: CustomScrollView(
         slivers: [
           SliverAppBar(
-            backgroundColor: Color.fromARGB(255, 194, 200, 244),
+            backgroundColor: const Color(0xFFF4E3F7),
             elevation: 0,
             leading: IconButton(
               icon: const Icon(
@@ -25,7 +25,7 @@ class CreateWebQrScreen extends StatelessWidget {
           SliverToBoxAdapter(
             child: Container(
               decoration: const BoxDecoration(
-                color: Color.fromARGB(255, 194, 200, 244),
+                color: Color(0xFFF4E3F7),
               ),
               padding: const EdgeInsets.symmetric(
                 horizontal: 16,
@@ -55,7 +55,7 @@ class CreateWebQrScreen extends StatelessWidget {
           ),
           SliverToBoxAdapter(
             child: Container(
-              color: const Color.fromARGB(255, 194, 200, 244),
+              color: const Color(0xFFF4E3F7),
               height: 30,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.end,
