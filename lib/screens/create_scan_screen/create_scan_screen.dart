@@ -1,6 +1,6 @@
 import 'package:eva_icons_flutter/eva_icons_flutter.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_create_qrcode/config/Routes.dart';
+import 'package:flutter_create_qrcode/configs/routes.dart';
 import 'package:flutter_create_qrcode/widgets/widget_exports.dart';
 import 'package:gap/gap.dart';
 
