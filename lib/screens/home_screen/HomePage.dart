@@ -21,31 +21,6 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     var height = MediaQuery.of(context).size.height;
     return Scaffold(
-      appBar: AppBar(
-        centerTitle: false,
-        backgroundColor: Colors.transparent,
-        elevation: 0,
-        title: const Text(
-          "MrQR",
-          style: TextStyle(
-            color: Colors.black,
-          ),
-        ),
-        actions: [
-          ElevatedButton(
-            onPressed: () {},
-            style: ElevatedButton.styleFrom(
-              shape: const CircleBorder(),
-              backgroundColor: Colors.white,
-            ),
-            child: Icon(
-              EvaIcons.cameraOutline,
-              color: const Color(0xFF6565FF),
-              size: 28,
-            ),
-          ),
-        ],
-      ),
       body: Container(
         padding: const EdgeInsets.symmetric(
           horizontal: 16,
@@ -79,7 +54,7 @@ class _HomePageState extends State<HomePage> {
               },
               currentIndex: currentIndex,
               selectedItemColor: const Color(0xFF6565FF),
-              unselectedItemColor: Color.fromARGB(255, 194, 200, 244),
+              unselectedItemColor: const Color.fromARGB(255, 194, 200, 244),
               showUnselectedLabels: true,
               items: const [
                 BottomNavigationBarItem(

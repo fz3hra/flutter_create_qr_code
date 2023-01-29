@@ -9,57 +9,89 @@ class CreateScanScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        const Text(
-          "Choose ",
+    return Scaffold(
+      appBar: AppBar(
+        centerTitle: false,
+        backgroundColor: Colors.transparent,
+        elevation: 0,
+        title: const Text(
+          "MrQR",
           style: TextStyle(
-            fontFamily: 'poppins_bold',
-            fontSize: 24,
-            color: Color(0xFF6565FF),
+            color: Colors.black,
           ),
         ),
-        const Text(
-          "your destination!",
-          style: TextStyle(
-            fontFamily: 'poppins_bold',
-            fontSize: 24,
+        actions: [
+          ElevatedButton(
+            onPressed: () {},
+            style: ElevatedButton.styleFrom(
+              shape: const CircleBorder(),
+              backgroundColor: Colors.white,
+            ),
+            child: const Icon(
+              EvaIcons.cameraOutline,
+              color: Color(0xFF6565FF),
+              size: 28,
+            ),
           ),
+        ],
+      ),
+      body: Container(
+        padding: const EdgeInsets.symmetric(
+          horizontal: 16,
         ),
-        const Gap(8),
-        const Text(
-          "Scan QR Code",
-          style: TextStyle(
-            fontFamily: 'poppins_regular',
-            fontSize: 16,
-          ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const Text(
+              "Choose ",
+              style: TextStyle(
+                fontFamily: 'poppins_bold',
+                fontSize: 24,
+                color: Color(0xFF6565FF),
+              ),
+            ),
+            const Text(
+              "your destination!",
+              style: TextStyle(
+                fontFamily: 'poppins_bold',
+                fontSize: 24,
+              ),
+            ),
+            const Gap(8),
+            const Text(
+              "Scan QR Code",
+              style: TextStyle(
+                fontFamily: 'poppins_regular',
+                fontSize: 16,
+              ),
+            ),
+            const Gap(32),
+            DestinationWidget(
+              title: 'Website',
+              icon: EvaIcons.browserOutline,
+              color: const Color(0xFF68A2F4),
+              onTap: () => Navigator.pushNamed(
+                context,
+                Routes.createQrWebsite,
+              ),
+            ),
+            const Gap(16),
+            DestinationWidget(
+              title: 'Email',
+              icon: EvaIcons.emailOutline,
+              color: const Color(0xFF2A9FEE),
+              onTap: () {},
+            ),
+            const Gap(16),
+            DestinationWidget(
+              title: 'Wifi',
+              icon: EvaIcons.wifi,
+              color: const Color(0xFF9E72E4),
+              onTap: () {},
+            ),
+          ],
         ),
-        const Gap(32),
-        DestinationWidget(
-          title: 'Website',
-          icon: EvaIcons.browserOutline,
-          color: Color(0xFF68A2F4),
-          onTap: () => Navigator.pushNamed(
-            context,
-            Routes.createQrWebsite,
-          ),
-        ),
-        const Gap(16),
-        DestinationWidget(
-          title: 'Email',
-          icon: EvaIcons.emailOutline,
-          color: Color(0xFF2A9FEE),
-          onTap: () {},
-        ),
-        const Gap(16),
-        DestinationWidget(
-          title: 'Wifi',
-          icon: EvaIcons.wifi,
-          color: Color(0xFF9E72E4),
-          onTap: () {},
-        ),
-      ],
+      ),
     );
   }
 }

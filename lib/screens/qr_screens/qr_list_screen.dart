@@ -6,25 +6,43 @@ class QrListScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: const [
-        Text(
-          "Scan QR Code",
+    return Scaffold(
+      appBar: AppBar(
+        centerTitle: false,
+        backgroundColor: Colors.transparent,
+        elevation: 0,
+        title: const Text(
+          "MrQR",
           style: TextStyle(
-            fontFamily: 'poppins_bold',
-            fontSize: 24,
+            color: Colors.black,
           ),
         ),
-        Gap(8),
-        Text(
-          "Scan QR Code",
-          style: TextStyle(
-            fontFamily: 'poppins_regular',
-            fontSize: 16,
-          ),
+      ),
+      body: Container(
+        padding: const EdgeInsets.symmetric(
+          horizontal: 16,
         ),
-      ],
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: const [
+            Text(
+              "Scan QR Code",
+              style: TextStyle(
+                fontFamily: 'poppins_bold',
+                fontSize: 24,
+              ),
+            ),
+            Gap(8),
+            Text(
+              "Scan QR Code",
+              style: TextStyle(
+                fontFamily: 'poppins_regular',
+                fontSize: 16,
+              ),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_create_qrcode/config/Routes.dart';
+import 'package:flutter_create_qrcode/configs/routes.dart';
 import 'package:flutter_create_qrcode/screens/create_scan_screen/create_web_qr_screen.dart';
 import 'package:flutter_create_qrcode/screens/screen_exports.dart';
 
@@ -13,15 +13,16 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      // home: const HomePage(),
       initialRoute: Routes.homeScreen,
       routes: {
         Routes.homeScreen: (context) => const HomePage(),
         Routes.createQrWebsite: (context) => const CreateWebQrScreen(),
+        Routes.recentsScreen: (context) => const RecentsScreen(),
       },
     );
   }
